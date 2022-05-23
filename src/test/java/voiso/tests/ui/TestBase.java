@@ -7,8 +7,9 @@ import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.extension.ExtendWith;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import voiso.config.Project;
 import voiso.helpers.AllureAttachments;
-import voiso.helpers.DriverSettings;
 
 import static com.codeborne.selenide.Selenide.closeWebDriver;
 
@@ -18,9 +19,19 @@ public class TestBase {
     @BeforeAll
     static void setUp() {
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
-        DriverSettings.configure();
         Configuration.baseUrl = "https://voiso.com/";
         Configuration.browserSize = "1920x1080";
+        String remoteBrowser = System.getProperty("remoteBrowser", "selenoid.autotests.cloud/wd/hub");
+        String remoteBrowserUser = System.getProperty("remoteBrowserUser", Project.config.user());
+        String remoteBrowserPassword = System.getProperty("remoteBrowserPassword", Project.config.password());
+
+        Configuration.baseUrl = "https://voiso.com/";
+        Configuration.browserSize = "1920x1080";
+        Configuration.remote = "https://" + remoteBrowserUser + ":" + remoteBrowserPassword + "@" + remoteBrowser;
+        DesiredCapabilities capabilities = new DesiredCapabilities();
+        capabilities.setCapability("enableVNC", true);
+        capabilities.setCapability("enableVideo", true);
+        Configuration.browserCapabilities = capabilities;
     }
 
     @AfterEach
