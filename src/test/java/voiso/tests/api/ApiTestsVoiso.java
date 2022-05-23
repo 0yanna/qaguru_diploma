@@ -15,7 +15,7 @@ import static org.hamcrest.Matchers.is;
 import static voiso.tests.api.specs.Specs.*;
 
 @Owner("0yanna")
-public class ApiTests {
+public class ApiTestsVoiso {
     Faker faker = new Faker();
     String email = faker.internet().emailAddress();
     String password = faker.internet().password();

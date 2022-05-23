@@ -11,7 +11,7 @@ import voiso.tests.ui.pages.TextPage;
 import static io.qameta.allure.Allure.step;
 
 @Owner("0yanna")
-public class UITests extends TestBase {
+public class UITestsVoiso extends TestBase {
 
     TextPage TextPage = new TextPage();
     MainPage MainPage = new MainPage();

@@ -1,7 +1,7 @@
 package voiso.tests.ui.pages;
 
 import com.codeborne.selenide.SelenideElement;
-import voiso.helpers.DriverUtils;
+import voiso.helpers.AllureAttachments;
 
 import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selectors.byText;
@@ -55,7 +55,7 @@ public class TextPage {
     }
 
     public TextPage checkconsolelog() {
-        String consoleLogs = DriverUtils.getConsoleLogs();
+        String consoleLogs = AllureAttachments.getConsoleLogs();
         String errorText = "SEVERE";
 
         assertThat(consoleLogs).doesNotContain(errorText);

@@ -8,6 +8,7 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import voiso.config.Project;
 import voiso.helpers.AllureAttachments;
 
 import static com.codeborne.selenide.Selenide.closeWebDriver;
@@ -19,9 +20,9 @@ public class TestBase {
     static void setUp() {
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
 
-        String remoteBrowser = System.getProperty("remoteBrowser", "selenoid.autotests.cloud/wd/hub");
-        String remoteBrowserUser = System.getProperty("remoteBrowserUser", "user1");
-        String remoteBrowserPassword = System.getProperty("remoteBrowserPassword", "1234");
+        String remoteBrowser = System.getProperty(Project.config.remoteUrl());
+        String remoteBrowserUser = System.getProperty(Project.config.user());
+        String remoteBrowserPassword = System.getProperty(Project.config.password());
 
         Configuration.baseUrl = "https://voiso.com/";
         Configuration.browserSize = "1920x1080";
