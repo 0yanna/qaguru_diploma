@@ -2,9 +2,11 @@ package voiso.helpers;
 
 import com.codeborne.selenide.Selenide;
 import io.qameta.allure.Attachment;
+import org.aeonbits.owner.ConfigFactory;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import voiso.config.ProjectConfig;
 
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -44,7 +46,8 @@ public class AllureAttachments {
     }
 
     public static URL getVideoUrl(String sessionId) {
-        String videoUrl = "https://selenoid.autotests.cloud/video/" + sessionId + ".mp4";
+        ProjectConfig ProjectConfig = ConfigFactory.create(ProjectConfig.class);
+        String videoUrl = ProjectConfig.videoAttachUrl() + sessionId + ".mp4";
 
         try {
             return new URL(videoUrl);
