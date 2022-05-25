@@ -4,15 +4,15 @@ java  \
 "-Denv=https://qa.guru.ru" \
 "-DreportLink=https://no.link/" \
 "-Dcomm=Any comment here" \
-"-Dconfig.file=./notifications/telegram_config_local.json" \
--jar ./notifications/allure-notifications-3.1.2.jar
+"-Dconfig.file=src/test/resources/notifications/telegram_config.json" \
+-jar src/test/resources/notifications/allure-notifications-3.1.2.jar
 
 
 ######## REMOTE TELEGRAM
-java  \
+java \
 "-DprojectName=${PROJECT_NAME}" \
 "-Denv=${ENVIRONMENT}" \
 "-DreportLink=${BUILD_URL}" \
-"-Dcomm=${COMMENT}" \
-"-Dconfig.file=.notifications/telegram_config.json" \
+"-Dcomm=Any comment here" \
+"-Dconfig.file=notifications/telegram_config.json" \
 -jar notifications/allure-notifications-3.1.2.jar
