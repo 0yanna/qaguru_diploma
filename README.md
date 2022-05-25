@@ -11,14 +11,14 @@
 
 
 ### :bar_chart:	Test coverage:
-###:pencil2: UI:
+### :pencil2: UI:
 > - [x] *Check if button 'request a demo' exists*
 > - [x] *Check if video exists on the main banner*
 > - [x] *Check title of the main page*
 > - [x] *Check if blog page exists*
 > - [x] *Page console log should not have errors*
 > 
-###:pencil2: API:
+### :pencil2: API:
 > - [x] *Email validation with condition Undeliverable:True with Faker*
 > - [x] *Email validation with condition Disposable:True and models*
 > - [x] *Email validation with condition Deliverable:True *
@@ -39,7 +39,6 @@
 <a href="https://www.telegram.com/"><img src="images/Telegram.svg" width="50" height="50"  alt="Telegram" title="Telegram"/></a>
 <a href="https://rest-assured.io/"><img src="images/rest-assured.png" width="45" height="45"  alt="REST Assured" title="REST Assured"/></a>
 <a href="https://projectlombok.org/"><img src="images/lombok.png" width="50" height="50"  alt="Lombok" title="Lombok"/></a>
-<a href="https://qameta.io/"><img src="images/Allure_TO.svg" width="50" height="50"  alt="Allure TestOps" title="Allure TestOps"/></a>
 </p>
 
 > In this project, autotests are written in <code>Java</code>, use <code>Selenide</code> for UI-tests and REST Assured for API-tests.
@@ -69,7 +68,7 @@ test
 -Dbrowser=${BROWSER}
 -DbrowserVersion=${VERSION}
 ```
-For running with task:
+:black_circle: For running with task:
 ```
 gradle clean UI_tests
 gradle clean API_tests
@@ -90,10 +89,10 @@ REPOSITORY
 Main window and build history
 ![](images/allure_report_all_tests.png)
 
-Test suite
+:spiral_notepad:	Test suite
 ![](images/allureSuites.png)
 
-Graphs
+:chart_with_downwards_trend:	Graphs
 ![](images/Graphs.png)
 
 ### <img src="images/Telegram.svg" width="25" height="25" /></a> Telegram report
