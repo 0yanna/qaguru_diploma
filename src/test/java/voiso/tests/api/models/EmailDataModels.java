@@ -1,5 +1,8 @@
 package voiso.tests.api.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+@JsonIgnoreProperties(ignoreUnknown=true)
 public class EmailDataModels {
 
     private String email;
