@@ -84,7 +84,8 @@ REPOSITORY
 >
 > <code>BROWSER_SIZE</code> – size of the browser window will be used to run the tests (_default - <code>1920x1080</code>_).
 
-### <img src="images/Allure_Report.svg" width="25" height="25" /></a> <a target="_blank" href="https://jenkins.autotests.cloud/job/0yanna_hw13/allure/">Allure report</a>
+### <img src="images/Allure_Report.svg" width="25" height="25" /></a> <a target="_blank" href="https://jenkins.autotests.cloud/job/0yanna_qa_guru_11_diploma/">Allure report</a>
+![](images/allure11.png)
 
 Main window and build history
 ![](images/allure_report_all_tests.png)
