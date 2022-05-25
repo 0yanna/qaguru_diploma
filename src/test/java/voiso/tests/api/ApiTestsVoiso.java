@@ -34,7 +34,6 @@ public class ApiTestsVoiso {
                 .log().all()
                 .spec(responseSpec200)
                 .body("state", is("undeliverable"));
-
     }
 
     @Tag("API")
@@ -57,12 +56,11 @@ public class ApiTestsVoiso {
         assertThat(EmailDataModels.getUser()).isEqualTo("nejeko5007");
         assertThat(EmailDataModels.getFull_name()).isEqualTo(null);
         assertThat(EmailDataModels.getState()).isEqualTo("risky");
-
     }
 
     @Tag("API")
     @Test
-    @Description("Email validation with condition Deliverable:True ")
+    @Description("Email validation with condition Deliverable:True")
     @DisplayName("Voiso API test 3")
     void checkDeliverableEmail() {
         given()
@@ -74,19 +72,18 @@ public class ApiTestsVoiso {
                 .log().all()
                 .spec(responseSpec200)
                 .body("state", is("deliverable"));
-
     }
 
    @Tag("API")
    @Test
-   @Description("Invalid email and password verification ")
+   @Description("Invalid email and password verification with Lombok")
    @DisplayName("Voiso API test 4")
    void checkInvalidEmailAndPasswordWithLombok() {
        EmailDataLombok emailDataLombok = new EmailDataLombok();
        emailDataLombok.setEmail(email);
        emailDataLombok.setPassword(password);
 
-               EmailDataLombok emailDataLombokResponse = given()
+       given()
                .spec(request)
                .body(emailDataLombok)
                .when()
