@@ -17,6 +17,7 @@
 > - [x] *Check title of the main page*
 > - [x] *Check if blog page exists*
 > - [x] *Page console log should not have errors*
+> 
 ###:pencil2: API:
 > - [x] *Email validation with condition Undeliverable:True with Faker*
 > - [x] *Email validation with condition Disposable:True and models*

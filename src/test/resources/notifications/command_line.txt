@@ -14,5 +14,5 @@ java  \
 "-Denv=${ENVIRONMENT}" \
 "-DreportLink=${BUILD_URL}" \
 "-Dcomm=${COMMENT}" \
-"-Dconfig.file=./notifications/telegram_config.json" \
--jar ./notifications/allure-notifications-3.1.2.jar
+"-Dconfig.file=notifications/telegram_config.json" \
+-jar notifications/allure-notifications-3.1.2.jar
